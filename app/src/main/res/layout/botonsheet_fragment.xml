@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@android:color/white"
+        android:drawableStart="@drawable/baseline_history_toggle_off_24"
+        android:gravity="start|center_vertical"
+        android:text="   Aplicaciones Instaladas"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_apps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"></androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/tv_apps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Aplicaciones Instaladas en el Dispositivo Saco Oliveros \n(hacemos recordar a los padres de familia que la garantía no cubre, daños causados por la instalación de cualquier software o aplicaciones no aprobados por la Institución(políticas de garantía), escríbanos un mail desde la pestaña Contáctanos para dar permisos a la Aplicación que desea usar, muchas gracias)"
+        android:textSize="10sp" />
+
+</LinearLayout>

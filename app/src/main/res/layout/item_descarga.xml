@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:padding="2dp">
+
+    <CheckBox
+        android:id="@+id/chk_delete"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="4dp"
+        android:buttonTint="@drawable/color_checkbox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/card_animdownload"
+        android:layout_width="510dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/img_trash"
+        app:layout_constraintStart_toEndOf="@+id/chk_delete"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/img_icondescarga"
+            android:layout_width="25dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/helico3" />
+
+        <TextView
+            android:id="@+id/edt_itemfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:hint="Archivo"
+            android:textColor="@color/celesteD"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/edt_itemfecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:hint="Hoy"
+            android:inputType="textMultiLine"
+            android:textSize="8sp" />
+
+
+        <TextView
+            android:id="@+id/edt_itemrutaurl"
+            android:layout_width="399dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="3dp"
+            android:textSize="10sp"
+            android:visibility="gone">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/img_trash"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_delete_forever"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
