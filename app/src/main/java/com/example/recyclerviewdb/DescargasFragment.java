@@ -132,30 +132,18 @@ public class DescargasFragment extends Fragment {
 
         listAppRemote = new ArrayList<>();
 
-        MethodWs methodWs = HelperWs.getConfiguration(getContext(), "").create(MethodWs.class);
-        Call<ResponseBody> responseBodyCall = methodWs.getAplicacionesSecurity("aplicaciones");
-        responseBodyCall.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                if (response.isSuccessful()) {
-                    ResponseBody informacion = response.body();
-                    try {
-                        String cadena_respuesta = informacion.string();
-                        // Log.e("infoResponse", cadena_respuesta);
+        String cadena_respuesta=  "{\n" +
+                "    \"packageName\": \"com.discord\"\n" +
+                "  },\n" +
+                "  {\n" +
+                "    \"packageName\": \"org.telegram.messenger\"\n" +
+                "  }";
+
+
 
                         listaApps(cadena_respuesta);
 
-                    } catch (Exception e) {
-                        Log.e("infoAplicaciones", e.toString());
-                    }
-                }
-            }
 
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                Log.e("ResponseFailApp", t.toString());
-            }
-        });
 
 //        AddBottomSheetDialogFragment addPhotoBottomDialogFragment =
 //                AddBottomSheetDialogFragment.newInstance();
